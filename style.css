@@ -160,6 +160,13 @@ ul {
   color: var(--navy);
 }
 
+.logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .logo-mark {
   width: 38px;
   height: 38px;
