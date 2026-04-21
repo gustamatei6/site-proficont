@@ -167,6 +167,14 @@ ul {
   object-fit: contain;
 }
 
+.logo-img--footer {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .logo-mark {
   width: 38px;
   height: 38px;
