@@ -579,7 +579,7 @@ ul {
 
 /* ===== AVANTAJE ===== */
 .avantaje {
-  background: var(--navy);
+  background: var(--bg-light);
 }
 
 .avantaje-grid {
@@ -589,13 +589,13 @@ ul {
 }
 
 .avantaj {
-  color: var(--white);
+  color: var(--text);
 }
 
 .avantaj-num {
   font-size: 48px;
   font-weight: 700;
-  color: rgba(26, 86, 219, .5);
+  color: rgba(26, 86, 219, .3);
   line-height: 1;
   margin-bottom: 16px;
   font-family: 'Playfair Display', serif;
@@ -604,10 +604,11 @@ ul {
 .avantaj h3 {
   font-size: 18px;
   margin-bottom: 12px;
+  color: var(--navy);
 }
 
 .avantaj p {
-  color: rgba(255, 255, 255, .65);
+  color: #64748b;
   font-size: 15px;
   line-height: 1.65;
 }
@@ -1003,7 +1004,8 @@ ul {
 
 /* ===== PAGE HEADER (inner pages) ===== */
 .page-header {
-  background: var(--navy);
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
   padding: 64px 0 56px;
   position: relative;
   overflow: hidden;
@@ -1013,7 +1015,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(26, 86, 219, .4) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(26, 86, 219, .06) 0%, transparent 70%);
 }
 
 .page-header .container {
@@ -1024,22 +1026,22 @@ ul {
 .page-header-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--white);
+  color: var(--navy);
   margin-bottom: 12px;
 }
 
 .page-header-breadcrumb {
   font-size: 14px;
-  color: rgba(255, 255, 255, .55);
+  color: #94a3b8;
 }
 
 .page-header-breadcrumb a {
-  color: rgba(255, 255, 255, .75);
+  color: #64748b;
   transition: color var(--transition);
 }
 
 .page-header-breadcrumb a:hover {
-  color: var(--white);
+  color: var(--navy);
 }
 
 /* ===== SOCIAL MEDIA BUTTONS ===== */

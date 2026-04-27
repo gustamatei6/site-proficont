@@ -8,6 +8,293 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== DE CE NOI – PAGE STYLES ===== */
+
+    .dcn-hero {
+      background: #fff;
+      padding: 80px 0 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dcn-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .dcn-hero-tag {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .dcn-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .dcn-hero-title span {
+      color: var(--blue);
+    }
+
+    .dcn-hero-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .dcn-hero-breadcrumb {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .dcn-hero-breadcrumb a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .dcn-stats-box {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .dcn-stat {
+      text-align: center;
+    }
+
+    .dcn-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .dcn-stat-num span {
+      color: var(--blue);
+    }
+
+    .dcn-stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ===== FEATURES GRID ===== */
+
+    .dcn-features {
+      background: #fff;
+      padding: 80px 0;
+    }
+
+    .dcn-features-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .dcn-features-header .section-tag {
+      margin-bottom: 12px;
+    }
+
+    .dcn-features-header .section-title {
+      margin-bottom: 0;
+    }
+
+    .dcn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .dcn-card {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .dcn-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .dcn-card-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: var(--blue-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dcn-card-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--blue);
+    }
+
+    .dcn-card-body h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .dcn-card-body p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ===== STATS BANNER ===== */
+
+    .dcn-banner {
+      background: var(--navy);
+      padding: 72px 0;
+    }
+
+    .dcn-banner-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .dcn-banner-stat {
+      text-align: center;
+      padding: 0 40px;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+
+    .dcn-banner-stat:last-child {
+      border-right: none;
+    }
+
+    .dcn-banner-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .dcn-banner-num em {
+      font-style: normal;
+      color: #1aab6d;
+    }
+
+    .dcn-banner-label {
+      font-size: 15px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.5;
+    }
+
+    /* ===== SECOND FEATURES ===== */
+
+    .dcn-features-2 {
+      background: var(--bg-light);
+      padding: 80px 0;
+    }
+
+    /* ===== CTA ===== */
+
+    .dcn-cta {
+      background: #fff;
+      padding: 80px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .dcn-cta-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .dcn-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .dcn-cta p {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @media (max-width: 900px) {
+      .dcn-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .dcn-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dcn-banner-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .dcn-banner-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+        padding: 0 0 40px;
+      }
+
+      .dcn-banner-stat:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .dcn-stats-box {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .dcn-card {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,64 +320,179 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
-  <div class="page-header">
-    <div class="container">
-      <p class="section-tag section-tag--light">Avantajele noastre</p>
-      <h1 class="page-header-title">De ce noi</h1>
-      <p class="page-header-breadcrumb"><a href="index.html">Acasă</a> / De ce noi</p>
+  <!-- HERO INTRO -->
+  <section class="dcn-hero">
+    <div class="container dcn-hero-inner">
+      <div>
+        <span class="dcn-hero-tag">De ce ProfiCont</span>
+        <h1 class="dcn-hero-title">Parteneri de încredere,<br /><span>nu doar contabili.</span></h1>
+        <p class="dcn-hero-sub">Alegerea unui birou de contabilitate nu ține doar de preț. Ține de oameni, de comunicare și de siguranța că lucrurile sunt făcute corect — de fiecare dată.</p>
+        <p class="dcn-hero-breadcrumb"><a href="index.html">Acasă</a> / De ce noi</p>
+      </div>
+      <div class="dcn-stats-box">
+        <div class="dcn-stat">
+          <div class="dcn-stat-num">12<span>+</span></div>
+          <div class="dcn-stat-label">Ani de experiență pe piață</div>
+        </div>
+        <div class="dcn-stat">
+          <div class="dcn-stat-num">350<span>+</span></div>
+          <div class="dcn-stat-label">Clienți mulțumiți</div>
+        </div>
+        <div class="dcn-stat">
+          <div class="dcn-stat-num">100<span>%</span></div>
+          <div class="dcn-stat-label">Conformitate fiscală garantată</div>
+        </div>
+        <div class="dcn-stat">
+          <div class="dcn-stat-num">24<span>h</span></div>
+          <div class="dcn-stat-label">Timp maxim de răspuns</div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- AVANTAJE -->
-  <section class="section avantaje">
+  <!-- AVANTAJE 1–4 -->
+  <section class="dcn-features">
     <div class="container">
-      <div class="section-header section-header--light">
-        <p class="section-tag section-tag--light">Ce ne diferențiază</p>
-        <h2 class="section-title section-title--light">Motivele pentru care clienții ne aleg</h2>
+      <div class="dcn-features-header">
+        <p class="section-tag">Ce ne diferențiază</p>
+        <h2 class="section-title">Motivele pentru care clienții ne aleg</h2>
       </div>
-      <div class="avantaje-grid">
-        <div class="avantaj">
-          <div class="avantaj-num">01</div>
-          <h3>Comunicare directă</h3>
-          <p>Ai mereu acces la un expert dedicat, nu la un call center. Răspundem rapid la orice întrebare.</p>
+      <div class="dcn-grid">
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Comunicare directă</h3>
+            <p>Ai mereu acces la un expert dedicat, nu la un call center. Răspundem rapid la orice întrebare — fără să te plimbe de la un departament la altul.</p>
+          </div>
         </div>
-        <div class="avantaj">
-          <div class="avantaj-num">02</div>
-          <h3>Prețuri transparente</h3>
-          <p>Fără costuri ascunse. Știi exact ce plătești și pentru ce. Pachete adaptate bugetului tău.</p>
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Garanție conformitate</h3>
+            <p>Ne asumăm responsabilitatea pentru corectitudinea declarațiilor și a situațiilor financiare. Erorile noastre sunt problemele noastre, nu ale tale.</p>
+          </div>
         </div>
-        <div class="avantaj">
-          <div class="avantaj-num">03</div>
-          <h3>Tehnologie modernă</h3>
-          <p>Lucrăm digital — documente în cloud, semnături electronice, rapoarte online în timp real.</p>
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Prețuri transparente</h3>
+            <p>Fără costuri ascunse sau surprize pe factură. Știi exact ce plătești și pentru ce — cu pachete adaptate la dimensiunea și bugetul afacerii tale.</p>
+          </div>
         </div>
-        <div class="avantaj">
-          <div class="avantaj-num">04</div>
-          <h3>Garanție conformitate</h3>
-          <p>Ne asumăm responsabilitatea pentru corectitudinea declarațiilor și a situațiilor financiare.</p>
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Suport prioritar</h3>
+            <p>Clienții noștri beneficiază de suport prioritar în perioadele critice — declarații lunare, bilanțuri anuale, controale ANAF. Ești pregătit, indiferent de termen.</p>
+          </div>
         </div>
-        <div class="avantaj">
-          <div class="avantaj-num">05</div>
-          <h3>Experiență dovedită</h3>
-          <p>Peste 12 ani pe piață și 350+ de clienți mulțumiți vorbesc mai bine decât orice promisiune.</p>
-        </div>
-        <div class="avantaj">
-          <div class="avantaj-num">06</div>
-          <h3>Formare continuă</h3>
-          <p>Echipa noastră participă la cursuri și conferințe anuale pentru a rămâne mereu actualizată.</p>
-        </div>
-        <div class="avantaj">
-          <div class="avantaj-num">07</div>
-          <h3>Suport prioritar</h3>
-          <p>Clienții noștri beneficiază de suport prioritar în perioadele de declarații și bilanțuri.</p>
-        </div>
-        <div class="avantaj">
-          <div class="avantaj-num">08</div>
-          <h3>Confidențialitate totală</h3>
-          <p>Datele tale sunt protejate conform GDPR. Nu partajăm nicio informație fără acordul tău explicit.</p>
-        </div>
+
       </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="dcn-banner">
+    <div class="container dcn-banner-inner">
+      <div class="dcn-banner-stat">
+        <div class="dcn-banner-num"><em>12+</em> ani</div>
+        <div class="dcn-banner-label">de experiență activă pe piața din România</div>
+      </div>
+      <div class="dcn-banner-stat">
+        <div class="dcn-banner-num"><em>350+</em></div>
+        <div class="dcn-banner-label">clienți din industrii diferite — HoReCa, IT, retail, construcții</div>
+      </div>
+      <div class="dcn-banner-stat">
+        <div class="dcn-banner-num"><em>0</em> penalități</div>
+        <div class="dcn-banner-label">aplicate clienților noștri din cauza erorilor contabile</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANTAJE 5–8 -->
+  <section class="dcn-features-2">
+    <div class="container">
+      <div class="dcn-grid">
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Tehnologie modernă</h3>
+            <p>Lucrăm 100% digital — documente în cloud, semnături electronice și rapoarte financiare online disponibile oricând, de pe orice dispozitiv.</p>
+          </div>
+        </div>
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Formare continuă</h3>
+            <p>Echipa noastră participă anual la cursuri, seminarii și conferințe de specialitate pentru a rămâne mereu la curent cu legislația în continuă schimbare.</p>
+          </div>
+        </div>
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Experiență dovedită</h3>
+            <p>Peste 12 ani pe piață și 350+ clienți mulțumiți reprezintă un portofoliu real, nu o promisiune. Cunoaștem provocările fiecărei industrii în parte.</p>
+          </div>
+        </div>
+
+        <div class="dcn-card">
+          <div class="dcn-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div class="dcn-card-body">
+            <h3>Confidențialitate totală</h3>
+            <p>Datele tale financiare sunt protejate conform GDPR și tratatelor de confidențialitate. Nu partajăm nicio informație fără acordul tău explicit.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="dcn-cta">
+    <div class="container">
+      <p class="dcn-cta-label">Hai să colaborăm</p>
+      <h2>Convinge-te singur.<br />Prima consultație e gratuită.</h2>
+      <p>Discutăm despre afacerea ta, analizăm nevoile și îți oferim o soluție clară — fără angajamente.</p>
+      <a href="index.html#contact" class="btn btn-primary">Contactează-ne acum</a>
     </div>
   </section>
 
@@ -99,7 +501,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-         
+          <img src="images/logo-proficont.jpeg" alt="ProfiCont" class="logo-img logo-img--footer" />
         </a>
         <p>Contabilitate profesionistă pentru afaceri ambițioase.</p>
         <div class="social-footer">
