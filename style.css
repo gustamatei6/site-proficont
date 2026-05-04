@@ -656,6 +656,57 @@ ul {
   font-size: 14px;
 }
 
+/* ===== PUTEREA DE A DECIDE ===== */
+.puterea {
+  background: #fff;
+}
+
+.puterea-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.puterea-img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.puterea-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.puterea-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.puterea-text {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 900px) {
+  .puterea-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .puterea-img {
+    height: 300px;
+  }
+}
+
 /* ===== TESTIMONIALE ===== */
 .testimoniale {
   background: var(--bg-light);
